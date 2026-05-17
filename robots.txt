@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Hovedsigemap
+Sitemap: https://deluxehairstudio.dk/sitemap.xml
+
+# Tillad alle billed-crawlere
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Host
+Host: https://deluxehairstudio.dk
