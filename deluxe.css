@@ -1266,3 +1266,262 @@ html.cursor-hover .gold-cursor-dot{opacity:0}
   .reviews-track,.ticker-track,.hero-orb,.scroll-progress span{animation:none !important}
   .gold-cursor,.gold-cursor-dot{display:none}
 }
+
+/* ============================================================
+   iPHONE / SMALL-PHONE RESPONSIVE LAYER  (≤480px and ≤390px)
+   Refined fits for iPhone SE, 12/13/14/15, 14/15 Pro Max
+   ============================================================ */
+
+/* Universal small-phone tuning — applies up to 480px */
+@media (max-width:480px){
+
+  /* Global rhythm */
+  html{ -webkit-text-size-adjust:100%; }
+  body{ font-size:15.5px; line-height:1.6; overflow-x:hidden; }
+  .container{ padding:0 20px; }
+  .section{ padding:64px 0; }
+
+  /* Typography — tighten to fit narrow screens */
+  h1{ font-size:clamp(2.4rem,10vw,3.4rem); letter-spacing:-.018em; }
+  h2{ font-size:clamp(1.9rem,7.4vw,2.6rem); }
+  h3{ font-size:1.35rem; }
+  p{ font-size:1rem; line-height:1.65; }
+
+  /* Buttons — comfortable thumb targets, never overflow */
+  .btn{ padding:16px 24px; font-size:.7rem; letter-spacing:.22em; gap:10px; width:100%; justify-content:center; }
+  .nav-cta .btn{ padding:12px 18px; width:auto; }
+  .hero-actions{ gap:10px; margin-top:32px; flex-direction:column; align-items:stretch; }
+  .hero-actions .btn{ width:100%; }
+
+  /* Top bar */
+  .topbar{ font-size:.6rem; letter-spacing:.18em; padding:9px 0; }
+  .topbar-inner{ justify-content:center; gap:10px; flex-wrap:wrap; }
+  .topbar .pipe{ display:none; }
+
+  /* Header & burger */
+  .nav{ padding:14px 0; gap:12px; }
+  .brand-mark{ width:40px; height:40px; }
+  .brand-mark img{ width:22px; height:22px; }
+  .brand-name{ font-size:1.25rem; }
+  .brand-tag{ font-size:.5rem; letter-spacing:.28em; margin-top:3px; }
+  .menu-toggle{ width:40px; height:40px; }
+  .nav-links{ width:min(320px,86vw); padding:80px 32px 40px; gap:24px; }
+  .nav-links a{ font-size:.95rem; letter-spacing:.22em; }
+
+  /* HERO — keep meta bar from colliding with copy */
+  .hero{ min-height:auto; padding:0; align-items:stretch; flex-direction:column; }
+  .hero-inner{ padding:120px 0 50px; max-width:100%; width:100%; }
+  .hero .container{ position:relative; z-index:2; }
+  .hero h1{ word-break:keep-all; overflow-wrap:break-word; hyphens:auto; }
+  .hero h1{ margin-top:18px; }
+  .hero p.lead{ font-size:1rem; margin-top:20px; }
+  .hero-meta{
+    position:static; padding:22px 20px 28px;
+    flex-direction:column; align-items:flex-start; gap:14px;
+    border-top:1px solid rgba(161,115,38,.28);
+    background:rgba(15,10,6,.6); margin:0;
+  }
+  .hero-meta-list{ gap:18px 26px; }
+  .hero-meta .item{ font-size:.6rem; letter-spacing:.22em; }
+  .hero-meta .item strong{ font-size:1rem; }
+  .sound-toggle{ right:14px; top:14px; width:38px; height:38px; }
+
+  /* INTRO */
+  .intro{ gap:36px; }
+  .intro-image{ aspect-ratio:4/5; max-width:340px; margin:0 auto; }
+  .intro-image::before{ inset:-8px; }
+  .intro-image::after{ inset:10px; }
+  .intro-stats{ grid-template-columns:repeat(3,1fr); gap:14px; margin-top:36px; padding-top:24px; }
+  .intro-stat .num{ font-size:2.2rem; }
+  .intro-stat .label{ font-size:.55rem; letter-spacing:.22em; margin-top:6px; }
+  .intro-text .signature{ font-size:1.25rem; margin-top:22px; }
+
+  /* VALUES */
+  .values{ margin-top:42px; gap:14px; }
+  .value{ padding:32px 22px; }
+
+  /* SECTION HEAD */
+  .section-head{ margin-bottom:48px; }
+  .section-head p{ font-size:.98rem; }
+  .eyebrow{ font-size:.6rem; letter-spacing:.32em; gap:12px; }
+  .eyebrow::before,.eyebrow.center::before,.eyebrow.center::after{ width:22px; }
+
+  /* SERVICES */
+  .services{ gap:18px; }
+  .service-card{ padding:32px 22px 28px; }
+  .service-card h3{ margin-bottom:20px; padding-bottom:18px; font-size:1.35rem; }
+  .service-list li{ flex-direction:column; gap:6px; padding:14px 0; }
+  .service-list .price{ font-size:1.2rem; align-self:flex-end; }
+  .services-foot{ margin-top:48px; padding-top:32px; }
+  .services-foot p{ font-size:.9rem; margin-bottom:22px; }
+
+  /* TEAM */
+  .team{ gap:48px; }
+  .member-photo{ width:170px; height:215px; border-radius:85px 85px 6px 6px; margin-bottom:24px; }
+  .member-photo::before{ inset:-10px; border-radius:96px 96px 8px 8px; }
+  .member h3{ font-size:1.4rem; }
+  .member .role{ font-size:.58rem; letter-spacing:.3em; margin-bottom:14px; }
+  .member p{ font-size:.95rem; }
+
+  /* GALLERY (home) — go 2-cell tile, smaller rows */
+  .gallery{ grid-auto-rows:120px; gap:10px; }
+
+  /* FULL GALLERY */
+  .full-gallery{ grid-template-columns:repeat(2,1fr); gap:10px; }
+  .full-gallery .gallery-item,
+  .full-gallery .gallery-item:nth-child(3n),
+  .full-gallery .gallery-item:nth-child(5n){ aspect-ratio:3/4; }
+  .gallery-filters{ gap:6px; margin-bottom:36px; }
+  .gallery-filter{ padding:9px 16px; font-size:.6rem; letter-spacing:.22em; }
+
+  /* TESTIMONIALS */
+  .testimonial{ padding:0 6px; }
+  .testimonial .quote-mark{ font-size:5rem; }
+  .testimonial blockquote{ font-size:1.2rem; line-height:1.55; }
+  .testimonial-dots{ margin-top:32px; }
+
+  /* INFO (HOURS + CONTACT) */
+  .info-col{ padding:36px 22px; }
+  .info-col h3{ font-size:1.55rem; margin-bottom:22px; gap:10px; }
+  .info-col h3::before{ width:24px; }
+  .hours-list li{ font-size:.95rem; padding:11px 0; }
+  .hours-list .time,.hours-list .closed{ font-size:1.1rem; }
+  .contact-block{ margin-bottom:24px; }
+  .contact-block a,.contact-block address{ font-size:1.2rem; }
+  .info-cta{ margin-top:28px; padding-top:22px; }
+  .info-cta .btn{ width:100%; }
+
+  /* BOOK BANNER */
+  .book-banner{ padding:90px 0; }
+  .book-banner h2{ font-size:clamp(1.9rem,7vw,2.6rem); }
+  .book-banner p{ font-size:1rem; margin-bottom:32px; }
+  .book-banner .btn-primary{ padding:18px 28px; width:auto; max-width:100%; }
+  .book-banner .monogram{ font-size:16rem; }
+
+  /* FOOTER */
+  .site-footer{ padding:64px 0 24px; }
+  .footer-grid{ gap:34px; margin-bottom:44px; }
+  .footer-brand p{ font-size:.9rem; max-width:100%; }
+  .footer-col h5{ margin-bottom:16px; }
+  .footer-col li{ margin-bottom:10px; }
+  .footer-col a{ font-size:.9rem; }
+  .footer-bottom{ flex-direction:column; align-items:flex-start; gap:10px; font-size:.62rem; letter-spacing:.16em; }
+
+  /* PAGE HERO (sub-pages) */
+  .page-hero{ padding:120px 0 64px; }
+  .page-hero h1{ font-size:clamp(2.2rem,9vw,3.2rem); }
+  .page-hero p.lead{ font-size:1rem; }
+  .page-hero .crumbs{ font-size:.56rem; letter-spacing:.26em; margin-bottom:22px; flex-wrap:wrap; }
+
+  /* PROFILE (stylist pages) */
+  .profile{ gap:36px; }
+  .profile-image{ max-width:340px; margin:0 auto; }
+  .profile-image::before{ inset:-8px; }
+  .profile-image::after{ inset:12px; }
+  .profile-meta{ grid-template-columns:1fr 1fr; gap:18px; margin-top:30px; padding-top:24px; }
+  .profile-meta .item .val{ font-size:1.15rem; }
+  .profile-specialities li{ font-size:.95rem; padding:12px 0; gap:10px; }
+
+  /* PRICE SECTIONS (behandlinger) */
+  .price-section{ gap:28px; margin-bottom:48px; }
+  .price-section .price-list{ padding:30px 22px; }
+  .price-section .price-list::before{ left:22px; right:22px; }
+  .price-section .price-list li{ flex-direction:column; gap:6px; }
+  .price-section .price-list .price{ align-self:flex-end; font-size:1.2rem; }
+
+  /* CTA mini & insta-banner */
+  .cta-mini{ padding:34px 24px; gap:22px; }
+  .cta-mini h3{ font-size:1.45rem; }
+  .cta-mini p{ font-size:.9rem; }
+  .cta-mini .btn{ width:100%; }
+  .insta-banner{ padding:32px 24px; gap:22px; }
+  .insta-banner h3{ font-size:1.4rem; }
+  .insta-banner p{ font-size:.92rem; }
+  .insta-banner .btn{ width:100%; }
+
+  /* EDITORIAL */
+  .editorial-full{ min-height:280px; aspect-ratio:4/3; }
+  .editorial-full .caption{ left:22px; right:22px; bottom:24px; }
+  .editorial-full .caption h3{ font-size:1.5rem; }
+  .editorial-split{ gap:10px; }
+  .editorial-quote{ padding:80px 0; }
+  .editorial-quote .quote-mono{ font-size:80px; margin-bottom:-10px; }
+  .editorial-quote blockquote{ font-size:1.3rem; line-height:1.4; }
+
+  /* TYPO BREAK */
+  .typo-break{ padding:64px 0; }
+  .typo-break .typo-break-line{ font-size:1.2rem; line-height:1.5; }
+
+  /* GOOGLE BADGE + REVIEW MARQUEE */
+  .google-badge{ padding:18px 20px; margin-bottom:34px; gap:14px; }
+  .google-badge .g-rating{ font-size:1.65rem; }
+  .google-badge .g-meta{ font-size:.74rem; }
+  .review-card{ flex-basis:260px; padding:22px 20px; }
+  .review-card blockquote{ font-size:.96rem; line-height:1.6; }
+
+  /* STICKY CAT-NAV (price page) */
+  .cat-nav{ top:58px; }
+  .cat-nav ul{ gap:2px; justify-content:flex-start; overflow-x:auto; flex-wrap:nowrap; -webkit-overflow-scrolling:touch; padding:0 12px; }
+  .cat-nav ul::-webkit-scrollbar{ display:none; }
+  .cat-nav li{ flex-shrink:0; }
+  .cat-nav a{ padding:12px 12px; font-size:.6rem; letter-spacing:.18em; white-space:nowrap; }
+  .cat-nav .num{ font-size:.88rem; }
+
+  /* PRICE TICKER */
+  .price-ticker{ padding:14px 0; }
+  .ticker-track{ font-size:1.05rem; gap:22px; }
+
+  /* LIGHTBOX */
+  .lightbox{ padding:14px; }
+  .lightbox-close{ width:42px; height:42px; top:14px; right:14px; }
+
+  /* HERO ORBS */
+  .hero-orb-a{ width:340px; height:340px; left:-120px; top:-80px; }
+  .hero-orb-b{ width:280px; height:280px; right:-80px; bottom:-100px; }
+
+  /* DIVIDER */
+  .divider-ornament{ gap:14px; font-size:.75rem; }
+  .divider-ornament::before,.divider-ornament::after{ flex:0 0 38px; }
+}
+
+/* iPhone SE / mini-class tuning (≤390px) */
+@media (max-width:390px){
+  .container{ padding:0 16px; }
+  h1{ font-size:clamp(2.15rem,10.4vw,2.9rem); }
+  .topbar{ font-size:.55rem; letter-spacing:.14em; }
+  .brand-name{ font-size:1.15rem; }
+  .nav{ padding:12px 0; }
+  .hero-inner{ padding:104px 0 50px; }
+  .hero-meta{ padding:18px 16px 22px; }
+  .hero-meta-list{ gap:14px 22px; }
+  .intro-stat .num{ font-size:1.9rem; }
+  .service-card{ padding:28px 18px 24px; }
+  .info-col{ padding:30px 18px; }
+  .price-section .price-list{ padding:26px 18px; }
+  .footer-grid{ gap:28px; }
+  .review-card{ flex-basis:240px; }
+  .gallery{ grid-auto-rows:100px; }
+  .gallery-filter{ padding:8px 12px; font-size:.56rem; letter-spacing:.18em; }
+}
+
+/* iOS safe-area support (notch & home indicator) */
+@supports (padding:max(0px)) {
+  .topbar{ padding-left:max(0px, env(safe-area-inset-left)); padding-right:max(0px, env(safe-area-inset-right)); }
+  .container{ padding-left:max(20px, env(safe-area-inset-left)); padding-right:max(20px, env(safe-area-inset-right)); }
+  .hero-meta{ padding-bottom:max(28px, env(safe-area-inset-bottom)); }
+  .nav-links{ padding-bottom:max(40px, env(safe-area-inset-bottom)); padding-right:max(32px, env(safe-area-inset-right)); }
+  .site-footer{ padding-bottom:max(24px, env(safe-area-inset-bottom)); }
+}
+
+/* iOS sticky-hover quirk fix — neutralise hover transforms on touch */
+@media (hover:none){
+  .service-card:hover,
+  .value:hover,
+  .member:hover .member-photo,
+  .review-card:hover,
+  .gallery-item:hover img,
+  .intro-image:hover img{
+    transform:none !important;
+    box-shadow:initial;
+  }
+}
